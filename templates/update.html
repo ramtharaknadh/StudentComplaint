@@ -1,0 +1,52 @@
+{% extends 'homepage.html' %}
+{% block addcss %}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='application.css')}}">
+{% endblock %}
+{% block content %}
+    <div class="container">
+        <h2 class="title">Update Application</h2>
+        <form method="POST" enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="name of the candidate">Name Of The Candidate:</label>
+            <input type="text" id="name" name="name" value="{{name}}" />
+          </div>
+          <div class="form-group">
+            <label for="candidate father's name">Candidate Father's Name:</label>
+            <input type="text" id="fname" name="fname" value="{{fname}}" />
+          </div>
+          <div class="form-group">
+            <label for="religion">Religion:</label>
+            <input type="text" id="religion" name="religion" value="{{religion}}" />
+          </div>
+          <div class="form-group">
+            <label for="nationality">Nationality:</label>
+            <input type="text" id="nationality" name="nationality" value="{{nationality}}" />
+          </div>
+          <div class="form-group">
+            <label for="caste">Caste:</label>
+            <input type="text" id="caste" name="caste" value="{{caste}}" />
+          </div>
+          <div class="form-group">
+            <label for="pysically handicaped">Pysically Handicaped:</label>
+            <input type="text" id="handicaped" name="handicaped" value="{{handicaped}}" />
+          </div>
+          <div class="form-group">
+            <label for="address of candidate">Address Of Candidate:</label>
+            <input type="text" id="address" name="address" value="{{address}}" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="{{email}}" />
+          </div>
+          <div class="form-group">
+            <label for="10th class marks/cgpa">10th Class Marks/CGPA:</label>
+            <input type="number" id="tmarks" name="tmarks" value="{{tmarks}}" />
+          </div>
+          <div class="form-group">
+            <label for="inter marks/cgpa">Inter Marks/CGPA:</label>
+            <input type="number" id="imarks" name="imarks" value="{{imarks}}" />
+          </div>
+          <button class="swt" type="submit">Submit</button>
+        </form>
+      </div>
+{% endblock %}

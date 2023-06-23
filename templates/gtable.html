@@ -1,0 +1,30 @@
+{% extends 'adminhomepage.html' %}
+{% block addcss %}
+    <link rel="stylesheet" href="{{url_for('static',filename='table.css')}}">
+{% endblock %}
+{% block content %}
+<br>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>View link</th>
+                <th>View File</th>
+                <th>Date</th>
+                <th>Update link</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in data %}
+            <tr> 
+                <td>{{i[1]}}</td>
+                <td><a href="{{url_for('gcid',uid=i[0])}}">view</a></td>
+                <td><a href="{{url_for('gcfid',uid=i[0])}}">view</a></td>
+                <td>{{i[2]}}</td>
+                <td><a href="{{url_for('statusupdate',uid=i[0])}}">Status</a></td>
+                <td><a href="{{url_for('statusmail',uid=i[0])}}">mail sent</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

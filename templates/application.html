@@ -1,0 +1,69 @@
+{% extends 'homepage.html' %}
+{% block addcss %}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='application.css')}}">
+{% endblock %}
+{% block content %}
+<br>
+    <div class="container">
+        <h2 class="title">Application Form</h2>
+        <form method="POST" enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="name of the candidate">Name Of The Candidate:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group">
+            <label for="candidate father's name">Candidate Father's Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="Enter your father name" required>
+          </div>
+          <div class="form-group">
+            <label for="religion">Religion:</label>
+            <input type="text" id="religion" name="religion" placeholder="Enter your Religion" required>
+          </div>
+          <div class="form-group">
+            <label for="nationality">Nationality:</label>
+            <input type="text" id="nationality" name="nationality" placeholder="Enter your Nationality" required>
+          </div>
+          <div class="form-group">
+            <label for="caste">Caste:</label>
+            <input type="text" id="caste" name="caste" placeholder="Enter your Caste" required>
+          </div>
+          <div class="form-group">
+            <label for="pysically handicaped">Pysically Handicaped:</label>
+            <input type="text" id="handicaped" name="handicaped" placeholder="Enter yes/No" required>
+          </div>
+          <div class="form-group">
+            <label for="address of candidate">Address Of Candidate:</label>
+            <input type="text" id="address" name="address" placeholder="Enter your Address" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+          </div>
+          <div class="form-group">
+            <label for="10th class marks/cgpa">10th Class Marks/CGPA:</label>
+            <input type="number" id="tmarks" name="tmarks" placeholder="Enter your 10th class marks" required>
+          </div>
+          <div class="form-group">
+            <label for="file">Upload 10th Marks Sheet</label>
+            <input type="file" id="file" name="file" accept=".jpg, .png, .pdf, .jpeg, .py, .txt, .docx, .doc" multiple required>
+          </div>
+          <div class="form-group">
+            <label for="inter marks/cgpa">Inter Marks/CGPA:</label>
+            <input type="number" id="imarks" name="imarks" placeholder="Enter your inter marks" required>
+          </div>
+          <div class="form-group">
+            <label for="file">Upload Inter Marks Sheet :</label>
+            <input type="file" id="file" name="file" accept=".jpg, .png, .pdf, .jpeg, .py, .txt, .docx, .doc" multiple required>
+          </div>
+          <div class="form-group">
+            <label for="file">Upload Photo:</label>
+            <input type="file" id="file" name="file" accept=".jpg, .png, .pdf, .jpeg, .py, .txt, .docx, .doc" multiple required>
+          </div>
+          <div class="form-group">
+            <label for="file">Upload Signature:</label>
+            <input type="file" id="file" name="file" accept=".jpg, .png, .pdf, .jpeg, .py, .txt, .docx, .doc" multiple required>
+          </div><br>
+          <button class="swt" type="submit">Submit</button>
+        </form>
+      </div>
+{% endblock %}

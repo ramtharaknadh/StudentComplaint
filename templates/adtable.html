@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='table.css')}}">
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>View link</th>
+                <th>Date</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in data %}
+            <tr> 
+                <td>{{i[1]}}</td>
+                <td><a href="{{url_for('advcid',uid=i[0])}}">view</a></td>
+                <td>{{i[2]}}</td>
+                <td><a href="#">update</a></td>
+                <td><a href="#">delete</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

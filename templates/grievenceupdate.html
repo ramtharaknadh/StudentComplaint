@@ -1,0 +1,19 @@
+{% extends 'adminhomepage.html' %}
+{% block addcss %}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='complaint.css')}}">
+{% endblock %}
+{% block content %}
+<br>
+    <div class="container">
+        <h2 class="title">Update Complaint Status</h2>
+        <form method="POST">
+          <div class="form-group">
+            <label for="complaint status">Complaint Status:</label>
+            <select name="status" id="status">
+              <option value="In Progress">In Progress</option>
+              <option value="Resolved">Resolved</option>
+            </select>
+          </div><br>
+          <button class="swt" type="submit">Submit</button>
+        </form>
+{% endblock %}

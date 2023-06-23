@@ -1,0 +1,39 @@
+{% extends 'adminhomepage.html' %}
+{% block addcss %}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='complaint.css')}}">
+{% endblock %}
+{% block content %}
+<br>
+    <div class="container">
+        <h2 class="title">Complaint Form</h2>
+          <div class="form-group">
+            <label for="name">Student Name:</label>
+            <input type="text" id="name" name="name" value="{{name}}" readonly/>
+          </div>
+          <div class="form-group">
+            <label for="rollno">Student Rollno:</label>
+            <input type="text" id="rollno" name="rollno" value="{{rollno}}" readonly/>
+          </div>
+          <div class="form-group">
+            <label for="name">Branch:</label>
+            <input type="text" id="branch" name="branch" value="{{branch}}" readonly/>
+          </div>
+          <div class="form-group">
+            <label for="name">year Of Studying:</label>
+            <input type="text" id="year" name="year" value="{{year}}" readonly/>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="{{email}}" readonly>
+          </div>
+          <div class="form-group">
+            <label for="problem title">Problem Title:</label>
+            <input type="text" id="title" name="title" value="{{title}}" readonly/>
+          </div>
+          <div class="form-group">
+            <label for="problem content">Problem Content:</label>
+            <textarea id="content" name="content" readonly>{{content}}</textarea>
+          </div>
+          <a href="{{url_for('viewgrievence')}}"><button>back</button></a>
+      </div>
+{% endblock %}

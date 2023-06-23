@@ -1,0 +1,30 @@
+{% extends 'adminhomepage.html' %}
+{% block addcss %}
+    <link rel="stylesheet" href="{{url_for('static',filename='table.css')}}">
+{% endblock %}
+{% block content %}
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>View link</th>
+                <th>View File</th>
+                <th>Applicant Name</th>
+                <th>Update Status(update status for any same named applications)</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in data %}
+            <tr> 
+                <td>{{i[1]}}</td>
+                <td><a href="{{url_for('daid',uid=i[0])}}">view</a></td>
+                <td><a href="{{url_for('dafid',uid=i[0])}}">view</a></td>
+                <td>{{i[2]}}</td>
+                <td><a href="{{url_for('applicationupdate',uid=i[0])}}">Status</a></td>
+                <td><a href="{{url_for('astatusmail',uid=i[0])}}">mail sent</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

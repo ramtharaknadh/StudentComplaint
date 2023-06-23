@@ -1,0 +1,45 @@
+{% extends 'homepage.html' %}
+{% block addcss %}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='complaint.css')}}">
+{% endblock %}
+{% block content %}
+<br>
+    <div class="container">
+        <h2 class="title">Complaint Form</h2>
+        <form method="POST" enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="name">Student Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group">
+            <label for="rollno">Student Rollno:</label>
+            <input type="text" id="rollno" name="rollno" placeholder="Enter your Rollno"required>
+          </div>
+          <div class="form-group">
+            <label for="name">Branch:</label>
+            <input type="text" id="branch" name="branch" placeholder="Enter your branch" required>
+          </div>
+          <div class="form-group">
+            <label for="name">Year Of Studying:</label>
+            <input type="text" id="year" name="year" placeholder="Enter your year Of Studying" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+          </div>
+          <div class="form-group">
+            <label for="problem title">Problem Title:</label>
+            <input type="text" id="title" name="title" placeholder="Enter your title"required>
+          </div>
+          <div class="form-group">
+            <label for="problem content">Problem Content:</label>
+            <textarea id="content" name="content" placeholder="Enter your Problem Content" rows="10" columns="40" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="file">Choose files:</label>
+            <input type="file" id="file" name="file" accept=".jpg, .png, .pdf, .jpeg, .py, .txt, .docx, .doc" multiple>
+          </div><br>
+          <button class="swt" type="submit">Submit</button>
+        </form>
+      </div>
+{% endblock %}
